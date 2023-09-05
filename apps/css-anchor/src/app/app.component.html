@@ -1,1 +1,12 @@
-<css-anchor-nx-welcome></css-anchor-nx-welcome> <router-outlet></router-outlet>
+<form>
+    <div>
+        <div class="label-container">
+            <label for="name">Name</label>
+            <button id="btn" type="button" popovertarget="info" popovertargetaction="toggle" class="information">i</button>
+            <!-- popovertargetaction="show/hide" -->
+            <div popover="manual" id="info">Tooltip info</div>
+            <!-- popover="auto" -->
+          </div>
+          <input type="text" placeholder="Name" class="input-field" />
+    </div>
+</form>

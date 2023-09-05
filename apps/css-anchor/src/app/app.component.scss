@@ -1,0 +1,35 @@
+.information {
+    background: skyblue;
+    border: none;
+    border-radius: 50%;
+    margin-left: 5px;
+    --anchor-name: --i-btn
+}
+
+.input-field {
+    margin-top: 10px;
+}
+
+.tooltip {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+[popover] {
+    anchor-default: --i-btn;
+    inset: unset;
+    position-fallback: --top-to-botton;
+    translate: -50%;
+}
+
+@position-fallback --top-to-botton {
+    @try {
+        bottom: anchor(top);
+        left: anchor(center);
+    }
+
+    @try {
+        top: anchor(bottom);
+        left: anchor(center);
+    }
+}
